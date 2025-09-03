@@ -346,7 +346,7 @@ require('lazy').setup({
       spec = {
         { '<leader>c', group = '[C]ode' },
         { '<leader>d', group = '[D]ocument' },
-        { '<leader>l', group = '[L]azyGit' },
+        { '<leader>i', group = '[I]ntegrated Apps' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
         { '<leader>t', group = '[T]oggle' },
