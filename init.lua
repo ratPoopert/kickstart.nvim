@@ -350,7 +350,7 @@ require('lazy').setup({
       -- Document existing key chains
       spec = {
         { '<leader>c', group = '[C]ode' },
-        { '<leader>d', group = '[D]ocument' },
+        { '<leader>d', group = '[D]ebug' },
         { '<leader>i', group = '[I]ntegrated Apps' },
         { '<leader>l', group = '[L]SP' },
         { '<leader>r', group = '[R]ename' },
