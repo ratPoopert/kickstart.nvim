@@ -9,13 +9,13 @@ return {
     -- See https://codeberg.org/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
     local dap = require 'dap'
 
-    vim.keymap.set('n', '<leader>d<space>', dap.toggle_breakpoint, { desc = '[ ] Set breakpoint' })
+    vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, { desc = 'Set [b]reakpoint' })
     vim.keymap.set('n', '<leader>dc', dap.continue, { desc = '[c]ontinue' })
-    vim.keymap.set('n', '<leader>dj', dap.step_into, { desc = '[j] Step Into' })
-    vim.keymap.set('n', '<leader>dl', dap.step_over, { desc = '[l] Step Over' })
-    vim.keymap.set('n', '<leader>dk', dap.step_out, { desc = '[k] Step Out' })
-    vim.keymap.set('n', '<leader>dh', dap.step_back, { desc = '[h] Step Back' })
     vim.keymap.set('n', '<leader>dr', dap.restart, { desc = '[r]estart' })
+    vim.keymap.set('n', '<F4>', dap.step_into, { desc = '[j] Step Into' })
+    vim.keymap.set('n', '<F3>', dap.step_over, { desc = '[l] Step Over' })
+    vim.keymap.set('n', '<F2>', dap.step_out, { desc = '[k] Step Out' })
+    vim.keymap.set('n', '<F1>', dap.step_back, { desc = '[h] Step Back' })
 
     local ui = require 'dapui'
     dap.listeners.before.attach.dapui_config = function()
@@ -31,7 +31,7 @@ return {
       ui.close()
     end
 
-    dap.adapters.gdb = require 'custom.dap.adapters.gdb'
+    dap.adapters.cppdbg = require 'custom.dap.adapters.cppdbg'
     dap.configurations.c = require 'custom.dap.configurations.c'
     dap.configurations.cpp = require 'custom.dap.configurations.c'
     dap.configurations.rust = require 'custom.dap.configurations.c'
