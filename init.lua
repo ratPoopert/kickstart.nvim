@@ -909,6 +909,7 @@ require('lazy').setup({
   },
 })
 
+require 'custom/colorscheme'
 require 'custom/keymaps'
 require 'custom/config'
 
